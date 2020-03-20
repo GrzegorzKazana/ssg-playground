@@ -1,6 +1,5 @@
-import fetch from "isomorphic-fetch";
-
 import { postsUrl } from "../../config/variables";
+import { httpService } from "../../config/rootService";
 import Layout from "../../common/components/Layout/Layout";
 import PostList from "./components/PostList";
 
@@ -13,8 +12,8 @@ function HomePage({ posts }) {
 }
 
 export const getStaticProps = () =>
-  fetch(postsUrl)
-    .then(res => res.json())
+  httpService
+    .get(postsUrl)
     .then(posts => ({ props: { posts: posts.slice(0, 10) } }));
 
 export default HomePage;

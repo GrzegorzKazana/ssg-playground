@@ -1,6 +1,5 @@
-import fetch from "isomorphic-fetch";
-
 import { postsUrl } from "../../config/variables";
+import { httpService } from "../../config/rootService";
 import Layout from "../../common/components/Layout/Layout";
 import ClientOnly from "../../common/components/ClientOnly";
 import Post from "../post/components/Post";
@@ -18,8 +17,7 @@ function PostPage({ pid, post }) {
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch(postsUrl);
-  const posts = await res.json();
+  const posts = await httpService.get(postsUrl);
 
   const displayedPosts = posts.slice(0, 10);
   const postIds = displayedPosts.map(({ id }) => id);
@@ -33,8 +31,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ctx => {
   const { pid } = ctx.params;
-  const res = await fetch(`${postsUrl}/${pid}`);
-  const post = await res.json();
+  const post = await httpService.get(`${postsUrl}/${pid}`);
 
   return {
     props: { pid, post }

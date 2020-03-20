@@ -1,13 +1,12 @@
-import fetch from "isomorphic-fetch";
-
 import css from "./style.scss";
+import { httpService } from "../../../../config/rootService";
 import { postsUrl } from "../../../../config/variables";
 import { usePromise } from "../../../../common/hooks";
 import CommentList from "../../components/CommentList";
 
 function CommentContainer({ postId }) {
   const { isPending, data, error } = usePromise(
-    () => fetch(`${postsUrl}/${postId}/comments`).then(r => r.json()),
+    () => httpService.get(`${postsUrl}/${postId}/comments`),
     []
   );
 
