@@ -1,4 +1,4 @@
-import "../water.scss";
+import "../src/common/style/water.scss";
 import "../src/common/style/global.scss";
 
 function MyApp({ Component, pageProps }) {

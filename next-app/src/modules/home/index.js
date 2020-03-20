@@ -2,11 +2,12 @@ import fetch from "isomorphic-fetch";
 
 import { postsUrl } from "../../config/variables";
 import Layout from "../../common/components/Layout/Layout";
+import PostList from "./components/PostList";
 
 function HomePage({ posts }) {
   return (
     <Layout>
-      <pre>{JSON.stringify(posts, null, 4)}</pre>
+      <PostList posts={posts} />
     </Layout>
   );
 }
