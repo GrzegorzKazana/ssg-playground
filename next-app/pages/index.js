@@ -1,5 +1,2 @@
-function HomePage() {
-  return <div>Welcome to Next.js!</div>;
-}
-
-export default HomePage;
+export { default } from "../src/modules/home";
+export { getStaticProps } from "../src/modules/home";
