@@ -1,0 +1,3 @@
+{
+  "/post/:postId/comments": "/comments?postId=:postId"
+}
