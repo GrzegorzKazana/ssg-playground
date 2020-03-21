@@ -10,8 +10,6 @@ function CommentContainer({ postId }) {
     []
   );
 
-  console.log({ isPending, data, error });
-
   return (
     <section>
       {isPending ? (
