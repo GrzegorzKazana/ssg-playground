@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve:mocks": "json-server --watch mocks/db.json -p 3999 -r mocks/routes.json",
     "serve:next": "http-serve next-app/out -p 4000"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "http-serve": "^1.0.1",
+    "json-server": "^0.16.1",
     "prettier": "^1.19.1",
     "prettier-plugin-svelte": "^0.7.0"
   }
