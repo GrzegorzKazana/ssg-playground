@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-serve": "^1.0.1"
+    "http-serve": "^1.0.1",
+    "prettier": "^1.19.1",
+    "prettier-plugin-svelte": "^0.7.0"
   }
 }
