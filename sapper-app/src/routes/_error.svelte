@@ -1,41 +1,21 @@
-<script>
-    export let status;
-    export let error;
+<article class="missing">
+    <h1>Page not found...</h1>
+    <h3>
+        Take me
+        <a rel="prefetch" href="/">home.</a>
+    </h3>
+</article>
 
-    const dev = process.env.NODE_ENV === 'development';
-</script>
+<style lang="scss">
+    @import '../common/style/mixins.scss';
 
-<svelte:head>
-    <title>{status}</title>
-</svelte:head>
+    .missing {
+        @include flex-center;
+        flex-direction: column;
 
-<h1>{status}</h1>
+        min-height: 100vh;
+        max-width: 100vw;
 
-<p>{error.message}</p>
-
-{#if dev && error.stack}
-    <pre>{error.stack}</pre>
-{/if}
-
-<style>
-    h1,
-    p {
-        margin: 0 auto;
-    }
-
-    h1 {
-        font-size: 2.8em;
-        font-weight: 700;
-        margin: 0 0 0.5em 0;
-    }
-
-    p {
-        margin: 1em auto;
-    }
-
-    @media (min-width: 480px) {
-        h1 {
-            font-size: 4em;
-        }
+        font-size: 2rem;
     }
 </style>
