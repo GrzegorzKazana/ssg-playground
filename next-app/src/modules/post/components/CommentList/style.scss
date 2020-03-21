@@ -1,0 +1,5 @@
+@import "../../../../common/style/mixins.scss";
+
+.comments {
+  @include ul-reset;
+}
