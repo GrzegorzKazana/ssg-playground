@@ -3,9 +3,9 @@ import React from "react"
 import Layout from "../../common/components/Layout"
 import PostList from "./components/PostList"
 
-const IndexPage = () => (
+const IndexPage = ({ pageContext: { posts } }) => (
   <Layout>
-    <h1>Hello</h1>
+    <PostList posts={posts}></PostList>
   </Layout>
 )
 

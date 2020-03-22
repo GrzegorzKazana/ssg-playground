@@ -6,12 +6,12 @@ import css from "./style.module.scss"
 function Post({ post: { id, title, body } }) {
   return (
     <article className={css.post}>
-      <Link href={`/post/${id}`}>
-        <section>
+      <section>
+        <Link to={`/post/${id}`}>
           <h2>{title}</h2>
-          <h4>{body}</h4>
-        </section>
-      </Link>
+        </Link>
+        <h4>{body}</h4>
+      </section>
     </article>
   )
 }

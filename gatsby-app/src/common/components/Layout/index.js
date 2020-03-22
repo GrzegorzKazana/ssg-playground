@@ -16,7 +16,7 @@ function Layout({ children }) {
         <ul className={css.link__container}>
           {links.map(({ label, url }) => (
             <li key={url} className={css.link__wrapper}>
-              <Link href={url} className={css.link}>
+              <Link to={url} className={css.link}>
                 {label}
               </Link>
             </li>
