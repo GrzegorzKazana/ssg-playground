@@ -1,1 +1,2 @@
-export { default } from "../modules/about"
+import pageAbout from "../modules/about"
+export default pageAbout
