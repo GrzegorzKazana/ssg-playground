@@ -12,4 +12,12 @@ module.exports.createPages = async ({ actions: { createPage } }) => {
     component: require.resolve("./src/modules/home"),
     context: { posts },
   })
+
+  posts.forEach(post =>
+    createPage({
+      path: `/post/${post.id}`,
+      component: require.resolve("./src/modules/post"),
+      context: { post },
+    })
+  )
 }
