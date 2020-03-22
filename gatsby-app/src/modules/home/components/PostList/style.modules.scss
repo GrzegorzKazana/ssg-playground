@@ -1,0 +1,6 @@
+@import "../../../../common/style/mixins.scss";
+
+.post__list {
+  @include ul-reset;
+  padding: 0 3rem;
+}
