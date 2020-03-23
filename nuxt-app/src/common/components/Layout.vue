@@ -4,7 +4,7 @@
       <h1 class="title">Awesome placeholder blog.</h1>
       <ul class="link__container">
         <li v-for="link in links" :key="link.url" class="link__wrapper">
-          <a :href="link.url" class="link">{{ link.label }}</a>
+          <nuxt-link :to="link.url" class="link">{{ link.label }}</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -18,15 +18,15 @@
 const links = [
   { label: 'Home', url: '/' },
   { label: 'About', url: '/about' }
-]
+];
 
 export default {
   data() {
     return {
       links
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
 function createHttpService(fetch) {
-    const get = url => fetch(url).then(res => res.json());
+  const get = (url) => fetch(url).then((res) => res.json());
 
-    return { get };
+  return { get };
 }
 
 export default createHttpService;
