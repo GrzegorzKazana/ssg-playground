@@ -14,7 +14,7 @@ import Post from './Post.vue';
 export default {
   components: { Post },
   props: {
-    posts: Array
+    posts: { type: Array, required: true }
   }
 };
 </script>
