@@ -1,3 +1,6 @@
+import { httpService } from './src/config/rootService';
+import { postsUrl } from './src/config/variables';
+
 export default {
   mode: 'universal',
   /*
@@ -47,5 +50,12 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    routes() {
+      return httpService
+        .get(postsUrl)
+        .then((posts) => posts.map(({ id }) => `/post/${id}`));
+    }
   }
-}
+};
