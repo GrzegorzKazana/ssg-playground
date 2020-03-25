@@ -1,7 +1,13 @@
 <script>
     const links = [{ label: 'Home', url: '/' }, { label: 'About', url: '/about' }];
+
+    export let title = 'An awesome blog.';
 </script>
 
+<svelte:head>
+    <title>{title}</title>
+    <meta name="description" content="Welcome to a totally fake blog made for ssg practice." />
+</svelte:head>
 <nav class="navbar">
     <h1 class="title">Awesome placeholder blog.</h1>
     <ul class="link__container">
