@@ -9,7 +9,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      head: 'Error | An awesome blog.'
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
