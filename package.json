@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve:mocks": "json-server --watch mocks/db.json -p 3999 -r mocks/routes.json",
+    "serve-mocks": "json-server --watch mocks/db.json -p 3999 -r mocks/routes.json",
+    "serve": "run-p serve:*",
     "serve:next": "http-serve next-app/out -p 4000",
     "serve:sapper": "http-serve sapper-app/__sapper__/export -p 4001",
     "serve:gatsby": "http-serve gatsby-app/public -p 4002",
-    "serve:nuxt": "http-serve nuxt-app/dist -p 4003"
+    "serve:nuxt": "http-serve nuxt-app/dist -p 4003",
+    "build": "run-p build:*",
+    "build:next": "cd next-app && npm run build:static",
+    "build:sapper": "cd sapper-app && npm run build:static",
+    "build:gatsby": "cd gatsby-app && npm run build:static",
+    "build:nuxt": "cd nuxt-app && npm run build:static"
   },
   "keywords": [],
   "author": "",
