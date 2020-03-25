@@ -12,8 +12,6 @@ function HomePage({ posts }) {
 }
 
 export const getStaticProps = () =>
-  httpService
-    .get(postsUrl)
-    .then(posts => ({ props: { posts: posts.slice(0, 10) } }));
+  httpService.get(postsUrl).then(posts => ({ props: { posts } }));
 
 export default HomePage;
