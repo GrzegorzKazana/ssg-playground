@@ -7,7 +7,7 @@ import CommentContainer from "../post/containers/CommentContainer"
 
 function PostPage({ pageContext: { post } }) {
   return (
-    <Layout>
+    <Layout title={`Post #${post.id}`}>
       <Post post={post}></Post>
       <ClientOnly>
         <CommentContainer postId={post.id}></CommentContainer>
