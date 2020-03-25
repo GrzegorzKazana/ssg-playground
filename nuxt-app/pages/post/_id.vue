@@ -1,5 +1,5 @@
 <template>
-  <Layout
+  <Layout :title="`Post #${post.id}`"
     ><Post :post="post"/><no-ssr><CommentContainer :post-id="post.id"/></no-ssr
   ></Layout>
 </template>

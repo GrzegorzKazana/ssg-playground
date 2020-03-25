@@ -4,7 +4,7 @@ import Layout from "../../common/components/Layout"
 
 function About() {
   return (
-    <Layout>
+    <Layout title="About | An awesome blog.">
       <article>
         <h3>
           This is a test blog application for fiddling with

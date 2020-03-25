@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Error | An awesome blog.</title>
+</svelte:head>
 <article class="missing">
     <h1>Page not found...</h1>
     <h3>

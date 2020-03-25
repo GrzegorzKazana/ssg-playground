@@ -15,15 +15,31 @@
 </template>
 
 <script>
+const defaultTilte = 'An awesome blog.';
+
 const links = [
   { label: 'Home', url: '/' },
   { label: 'About', url: '/about' }
 ];
 
 export default {
+  props: {
+    title: { type: String, default: defaultTilte }
+  },
   data() {
     return {
       links
+    };
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          name: 'description',
+          content: 'Welcome to a totally fake blog made for ssg practice.'
+        }
+      ]
     };
   }
 };

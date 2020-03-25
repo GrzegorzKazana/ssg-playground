@@ -21,7 +21,7 @@
     export let post;
 </script>
 
-<Layout>
+<Layout title={`Post ${post.id}`}>
     <Post {post} />
     <ClientOnly>
         <CommentContainer postId={post.id} />

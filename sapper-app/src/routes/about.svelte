@@ -2,7 +2,7 @@
     import Layout from '../common/components/Layout.svelte';
 </script>
 
-<Layout>
+<Layout title="About | An awesome blog.">
     <article>
         <h3>This is a test blog application for fiddling with server-side-generation (SSG).</h3>
         <section>
